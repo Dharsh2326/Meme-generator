@@ -1,16 +1,69 @@
-# React + Vite
+# Meme Generator 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React + Vite project that fetches meme templates from the Imgflip API and allows users to generate custom memes by editing the top/bottom text and picking a random image.
 
-Currently, two official plugins are available:
+## ⭐ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React components for Header and Main UI
+- Fetches meme templates from `https://api.imgflip.com/get_memes`
+- Controlled inputs for top/bottom text
+- Button to pick a random meme image
+- Vite for fast development and build
+- ESLint configuration included
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install and run the dev server:
 
-## Expanding the ESLint configuration
+```sh
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Build for production:
+
+```sh
+npm run build
+```
+
+Run ESLint:
+
+```sh
+npm run lint
+```
+
+Preview the production build:
+
+```sh
+npm run preview
+```
+
+## Project structure
+
+- [index.html](index.html) — HTML entry that loads [index.jsx](index.jsx).
+- [index.jsx](index.jsx) — Root entry that mounts the app (`createRoot` → [`App`](App.jsx)).
+- [App.jsx](App.jsx) — Root app component (imports and renders [`Header`](components/Header.jsx) and [`Main`](components/Main.jsx)).
+- [components/Header.jsx](components/Header.jsx) — Header component (shows logo at [images/troll-face.png](images/troll-face.png)).
+- [components/Main.jsx](components/Main.jsx) — Main meme UI and logic (state for meme, fetches memes, and provides [`getMemeImage`](components/Main.jsx) and [`handleChange`](components/Main.jsx)).
+- [index.css](index.css) — Global styles used by the root app (forms, meme layout).
+- [vite.config.js](vite.config.js) — Vite configuration (React plugin).
+- [package.json](package.json) — Scripts and dependencies.
+- [eslint.config.js](eslint.config.js) — ESLint setup and rules.
+- [.gitignore](.gitignore) — Ignored files for Git.
+
+Additional files in `src/` (also included in the workspace):
+- [src/main.jsx](src/main.jsx) — alternative entry (creates root and renders [`src/App.jsx`](src/App.jsx))
+- [src/App.jsx](src/App.jsx) — app in `src/` (note: workspace contains both root `App.jsx` and `src/App.jsx`)
+- [src/index.css](src/index.css) — theme styles used by `src/` app
+- [src/App.css](src/App.css) — additional styles
+- [src/assets/](src/assets/) — assets folder (empty/present)
+
+Directories:
+- [components/Header.jsx](components/Header.jsx)
+- [components/Main.jsx](components/Main.jsx)
+- [images/](images/) — contains [images/troll-face.png](images/troll-face.png)
+- [public/](public/) — public assets
+
+## 🧩 Notes
+
+This project was created as part of my React learning journey and helped me practice managing component state, handling user input, and integrating a public API for dynamic content.
