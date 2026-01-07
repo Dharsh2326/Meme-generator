@@ -2,7 +2,7 @@
 
 A lightweight React + Vite project that fetches meme templates from the Imgflip API and allows users to generate custom memes by editing the top/bottom text and picking a random image.
 
-## ⭐ Features
+##  Features
 
 - React components for Header and Main UI
 - Fetches meme templates from `https://api.imgflip.com/get_memes`
@@ -11,7 +11,7 @@ A lightweight React + Vite project that fetches meme templates from the Imgflip 
 - Vite for fast development and build
 - ESLint configuration included
 
-## 🚀 Quick Start
+##  Quick Start
 
 Install and run the dev server:
 
@@ -64,6 +64,6 @@ Directories:
 - [images/](images/) — contains [images/troll-face.png](images/troll-face.png)
 - [public/](public/) — public assets
 
-## 🧩 Notes
+## 📌 Notes
 
 This project was created as part of my React learning journey and helped me practice managing component state, handling user input, and integrating a public API for dynamic content.
